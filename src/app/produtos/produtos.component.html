@@ -1,0 +1,86 @@
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+      <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+              <a class="nav-link" href="index.html">
+                <i class="fa fa-fw fa-dashboard"></i>
+                <span class="nav-link-text">Painel</span>
+              </a>
+            </li>
+            <!--<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Controle">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+                  <i class="fa fa-fw fa-wrench"></i>
+                  <span class="nav-link-text">Controle</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseComponents">
+                  <li>
+                    <a href="http://localhost:4200/produtos">Produtos</a>
+                  </li>
+                  <li>
+                    <a href="http://localhost:4200/usuarios">Usuarios</a>
+                  </li>
+                </ul>
+              </li>-->
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+              <a class="nav-link" href="http://localhost:4200/produtos">
+                <i class="fa fa-fw fa-wrench"></i>
+                <span class="nav-link-text">Produtos</span>
+              </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+              <a class="nav-link" href="http://localhost:4200/usuarios">
+                <i class="fa fa-fw fa-wrench"></i>
+                <span class="nav-link-text">Usuários</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="navbar-nav sidenav-toggler">
+            <li class="nav-item">
+              <a class="nav-link text-center" id="sidenavToggler">
+                <i class="fa fa-fw fa-angle-left"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    <div class="content-wrapper">
+      <!--DIV RESPONSAVEL POR CHAMAR O CRUD-->
+      <div class="container-fluid">
+          <div class="text-center">
+              <h2 class="jumbotron">Registro de Produtos</h2>
+            </div>
+            <div class="row">
+              <div class="col-md-7">
+                <app-produto></app-produto>
+              </div>
+              <div class="col-md-5">
+                <app-produto-list></app-produto-list>
+              </div>
+            </div>
+      </div>
+      <!-- /.container-fluid-->
+      <!-- /.content-wrapper-->
+      <footer class="sticky-footer">
+        <div class="container">
+          <div class="text-center">
+            <small>Copyright © Your Website 2018</small>
+          </div>
+        </div>
+      </footer>
+      <!-- Scroll to Top Button-->
+      <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fa fa-angle-up"></i>
+      </a>
+      <!-- Logout Modal-->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+          </div>
+        </div>
+      </div>

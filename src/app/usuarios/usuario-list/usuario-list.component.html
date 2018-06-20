@@ -1,0 +1,15 @@
+<h6 class="text-center">Usuario Registrado</h6><br/>
+<table class="table table-sm table-hover">
+  <tr *ngFor="let usuario of usuarioList">
+      <td>{{usuario.nome_usuario}}</td>
+      <td>{{usuario.funcao_usuario}}</td>
+      <td>
+        <a class="btn" (click)="onEdit(usuario)">
+          <i class="fa fa-pencil-square-o"></i>
+        </a>
+        <a class="btn" (click)="onDelete(usuario.$id_usuario)">
+          <i class="fa fa-trash-o"></i>
+        </a>
+      </td>
+  </tr>
+</table>

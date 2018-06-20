@@ -1,0 +1,20 @@
+<form #usuarioForm="ngForm" (ngSubmit)="onSubmit(usuarioForm)">
+<!--<form usuarioForm="ngForm" (ngSubmit)="f.valid && recommend(f.value, f.valid)" #usuarioForm="ngForm" novalidate>-->
+    <input type="hidden" name="$id_usuario" #$id_usuario="ngModel" [(ngModel)]="usuarioService.selectedusuarios.$id_usuario">
+  <div class="form-group">
+    <label>Nome</label>
+    <input class="form-control" name="nome_usuario" #nome_usuario="ngModel" [(ngModel)]="usuarioService.selectedusuarios.nome_usuario" placeholder="Nome do Usuario" required>
+  </div>
+  <div class="form-group">
+      <label>Funcao</label>
+      <input class="form-control" type="text" name="funcao_usuario" #funcao_usuario="ngModel" [(ngModel)]="usuarioService.selectedusuarios.funcao_usuario" placeholder="Numero da funcao" required>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-default" type="submit" [disabled]="!produtoForm.valid">
+          <i class="fa fa-floppy-o"></i>
+           Submit</button>
+        <button class="btn btn-default" type="button" (click)="resetForm(produtoForm)">
+          <i class="fa fa-repeat"></i>
+           Reset</button>
+   </div>
+</form>

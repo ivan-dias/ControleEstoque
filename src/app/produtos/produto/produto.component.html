@@ -1,0 +1,28 @@
+<form #mesaForm="ngForm" (ngSubmit)="onSubmit(mesaForm)">
+  <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="produtoService.selectedproduto.$key">
+<div class="form-group">
+  <label>Descricao</label>
+  <input class="form-control" name="descricao" #Descricao="ngModel" [(ngModel)]="produtoService.selectedproduto.descricao" placeholder="Descrição do Produto" required>
+</div>
+<div class="form-group">
+  <label>Quantidade</label>
+  <input class="form-control" name="quantidade" #Quantidade="ngModel" [(ngModel)]="produtoService.selectedproduto.quantidade" placeholder="quantidade">
+</div>
+<div class="form-group">
+  <label>Valor</label>
+  <div class="input-group">
+      <div class="input-group-addon">
+        <i class=""></i>
+      </div>
+      <input class="form-control" name="valor" #valor="ngModel" [(ngModel)]="produtoService.selectedproduto.valor" placeholder="Quantidade">
+  </div>
+</div>
+<div class="form-group">
+  <button class="btn btn-default" type="submit" [disabled]="!produtoForm.valid">
+    <i class="fa fa-floppy-o"></i>
+     Submit</button>
+  <button class="btn btn-default" type="button" (click)="resetForm(produtoForm)">
+    <i class="fa fa-repeat"></i>
+     Reset</button>
+</div>
+</form>
